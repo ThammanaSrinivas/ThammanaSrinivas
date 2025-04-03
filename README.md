@@ -1,4 +1,6 @@
-<img src="img/hi.png" width="250">
+<div align="center">
+  <img src="img/hi.png" width="200">
+</div>
 
 <div style="position: relative; height: 80px;">
  <div align="center" style="position: absolute; width: 100%; top: 0;">
