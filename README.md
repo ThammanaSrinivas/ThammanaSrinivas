@@ -98,19 +98,16 @@
 
 <div align="center">
  <h3>Thanks for visiting! Keep coding! 🚀</h3>
- <img src="https://raw.githubusercontent.com/SP-XD/SP-XD/main/images/dev-working_rounded.gif" width="200">
+ <img src="img/Happy Person.png" width="250">
 </div>
 
 
 <div style="margin: 25px 0;"></div>
-<div>
+<div align="center">
  <a href="https://www.linkedin.com/in/evolvedaily/">
-   <img align="left" width="24px" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" />
+   <img width="24px" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" />
  </a>
  &nbsp;
  <img src="https://komarev.com/ghpvc/?username=ThammanaSrinivas&color=brightgreen&style=flat" alt="Profile Views" />
- &nbsp;
- <a href="https://github.com/ThammanaSrinivas">
-   <img src="https://img.shields.io/github/followers/ThammanaSrinivas?label=follow&style=social" alt="GitHub followers" />
  </a>
 </div>
