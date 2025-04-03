@@ -1,5 +1,4 @@
-# Hi there! 👋 
-
+<img src="img/hi.png" width="250">
 
 <div style="position: relative; height: 80px;">
  <div align="center" style="position: absolute; width: 100%; top: 0;">
@@ -103,9 +102,9 @@
 
 
 <div style="margin: 25px 0;"></div>
-<div align="center">
+<div>
  <a href="https://www.linkedin.com/in/evolvedaily/">
-   <img width="24px" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" />
+   <img align="left" width="24px" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" />
  </a>
  &nbsp;
  <img src="https://komarev.com/ghpvc/?username=ThammanaSrinivas&color=brightgreen&style=flat" alt="Profile Views" />
