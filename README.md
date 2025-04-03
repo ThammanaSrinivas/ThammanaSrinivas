@@ -99,7 +99,7 @@
 
 <div align="center">
  <h3>Thanks for visiting! Keep coding! 🚀</h3>
- <img src="img/Happy Person.png" width="250">
+ <img src="img/happy_person.png" width="250">
 </div>
 
 
