@@ -104,9 +104,9 @@
 
 
 <div style="margin: 25px 0;"></div>
-<div>
+<div align="center">
  <a href="https://www.linkedin.com/in/evolvedaily/">
-   <img align="left" width="24px" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" />
+   <img width="24px" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" />
  </a>
  &nbsp;
  <img src="https://komarev.com/ghpvc/?username=ThammanaSrinivas&color=brightgreen&style=flat" alt="Profile Views" />
