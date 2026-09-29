@@ -30,9 +30,19 @@ and makes keeping your screen-time promise something you do <b>together with fri
 </picture>
 </a>
 
+<br /><br />
+
+<a href="https://www.producthunt.com/products/zenmode-os-android-launcher">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/zm-stats-dark.svg" />
+  <img src="assets/zm-stats-light.svg" alt="ZenMode OS by the numbers: 4.6 star Play Store rating from 24 reviews, 500+ installs, #14 of 711 on Product Hunt launch day (26 Sep 2026), #7 most discussed." width="100%" />
+</picture>
+</a>
+
 <p align="center">
 <a href="https://play.google.com/store/apps/details?id=com.zenlauncher.zenmode"><img src="https://img.shields.io/badge/Get%20it%20on-Google%20Play-0F7A18?style=for-the-badge&logo=google-play&logoColor=white&labelColor=111111" alt="Get it on Google Play" /></a>
 <a href="https://zenmodeos.com/"><img src="https://img.shields.io/badge/Visit-zenmodeos.com-0F7A18?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=111111" alt="zenmodeos.com" /></a>
+<a href="https://www.producthunt.com/products/zenmode-os-android-launcher"><img src="https://img.shields.io/badge/Product%20Hunt-%2314%20of%20711-0F7A18?style=for-the-badge&logo=producthunt&logoColor=white&labelColor=111111" alt="#14 of 711 on Product Hunt launch day" /></a>
 <a href="https://github.com/ThammanaSrinivas/zenmode"><img src="https://img.shields.io/github/stars/ThammanaSrinivas/zenmode?style=for-the-badge&label=Star&logo=github&color=FFC800&labelColor=111111" alt="Star ZenMode on GitHub" /></a>
 <br />
 <sub>Top ~10% of ~780 at <b>FOSS Hack 2026</b> · GPLv3 · Kotlin + Jetpack Compose · Issues and PRs welcome</sub>

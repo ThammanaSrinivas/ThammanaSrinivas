@@ -68,9 +68,34 @@ THEMES = {
 }
 
 
+# Motion rules. CSS transforms here override transform attributes, so animated classes only
+# ever go on wrapper <g> elements that carry no transform of their own.
+ANIM = """<style>
+.rise{opacity:0;animation:rise .8s cubic-bezier(.22,1,.36,1) forwards}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.draw{transform-box:fill-box;transform-origin:left;transform:scaleX(0);animation:draw 1.2s .3s cubic-bezier(.22,1,.36,1) forwards}
+@keyframes draw{to{transform:scaleX(1)}}
+.drift{animation:drift 40s linear infinite}
+@keyframes drift{to{transform:translateX(-128px)}}
+.ring{stroke-dasharray:107;stroke-dashoffset:107;animation:ring 1.6s .5s cubic-bezier(.22,1,.36,1) forwards}
+@keyframes ring{to{stroke-dashoffset:32}}
+.flicker{transform-box:fill-box;transform-origin:bottom;animation:flicker 2.4s ease-in-out infinite}
+@keyframes flicker{30%{transform:scale(.95,1.07)}60%{transform:scale(1.03,.97)}}
+.shine{animation:shine 3.6s ease-in-out infinite}
+@keyframes shine{0%,60%{transform:translateX(0)}100%{transform:translateX(60px)}}
+.pulse{animation:pulse 1.8s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){.rise,.draw,.drift,.ring,.flicker,.shine,.pulse{animation:none;opacity:1}.draw{transform:none}.ring{stroke-dashoffset:32}}
+</style>"""
+
+
+def rise(content, delay):
+    return f'<g class="rise" style="animation-delay:{delay:.2f}s">{content}</g>'
+
+
 def svg(W, H, title, parts, defs=""):
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img">'
-            f"<title>{title}</title><defs>{defs}</defs>" + "".join(parts) + "</svg>")
+            f"<title>{title}</title>{ANIM}<defs>{defs}</defs>" + "".join(parts) + "</svg>")
 
 
 def pill(x, y, label, t, fill, stroke, color, dot=None):
@@ -103,23 +128,25 @@ def banner():
     # pattern of mark shapes, fading in from the left, like the hero image
     tiles = []
     for row in range(4):
-        for col in range(8):
+        for col in range(10):
             x, y = 560 + col * 128 - (row % 2) * 64, -40 + row * 128
             tiles.append(f'<g transform="translate({x} {y}) scale({104 / 1024})">{glyph(white)}</g>')
-    p.append(f'<g mask="url(#m)" opacity="0.09">{"".join(tiles)}</g></g>')
+    p.append(f'<g mask="url(#m)" opacity="0.09"><g class="drift">{"".join(tiles)}</g></g></g>')
 
     x = 88
     # inverse mark: white tile, green glyph
-    p.append(f'<g transform="translate({x} 88) scale({104 / 1024})"><rect width="1024" height="1024" rx="230" fill="{white}"/>'
-             f'{glyph(BRAND, white)}</g>')
-    p.append(text("Thammana Srinivas", CLASH, 76, x, 276, white))
-    p.append(text("Software engineer. Building a calmer phone.", GEIST, 28, x, 324, white, opacity=0.8))
+    p.append(rise(f'<g transform="translate({x} 88) scale({104 / 1024})"><rect width="1024" height="1024" rx="230" fill="{white}"/>'
+                  f'{glyph(BRAND, white)}</g>', 0.05))
+    p.append(rise(text("Thammana Srinivas", CLASH, 76, x, 276, white), 0.2))
+    p.append(rise(text("Software engineer. Building a calmer phone.", GEIST, 28, x, 324, white, opacity=0.8), 0.35))
     a, w = pill(x, 358, "SWE @ PAYPAL", None, "#FFFFFF1A", "#FFFFFF40", white, dot="#5BDF62")
     b, w2 = pill(x + w + 12, 358, "FOUNDER, ZENMODE OS", None, white, white, BRAND)
     c, _ = pill(x + w + w2 + 24, 358, "OPEN SOURCE", None, "none", "#FFFFFF40", "#FFFFFFCC")
-    p += a + b + c
-    p.append(text("QUIET THE NOISE,", MONO, 16, W - 72, 120, white, 0.14, "end", opacity=0.7))
-    p.append(text("TOGETHER.", MONO, 16, W - 72, 144, white, 0.14, "end"))
+    a = [a[0].replace('<circle ', '<circle class="pulse" ', 1) if '<circle' in a[0] else a[0], *a[1:]]
+    a = [part.replace('<circle ', '<circle class="pulse" ', 1) for part in a]
+    p += [rise("".join(a), 0.5), rise("".join(b), 0.6), rise("".join(c), 0.7)]
+    p.append(rise(text("QUIET THE NOISE,", MONO, 16, W - 72, 120, white, 0.14, "end", opacity=0.7)
+                  + text("TOGETHER.", MONO, 16, W - 72, 144, white, 0.14, "end"), 0.9))
     return svg(W, H, "Thammana Srinivas. Software engineer at PayPal, founder of ZenMode OS.", p, defs)
 
 
@@ -130,7 +157,7 @@ def section(num, title, t):
          text(num, MONO, 16, 22, 33, t["accent"], 0.05, "middle"),
          text(title, CLASH, 32, 62, 39, t["ink"])]
     x0 = 62 + measure(title, CLASH, 32) + 24
-    p.append(f'<rect x="{x0}" y="27" width="{W - x0}" height="1" fill="{t["line"]}"/>')
+    p.append(f'<g class="draw"><rect x="{x0}" y="27" width="{W - x0}" height="1" fill="{t["line"]}"/></g>')
     return svg(W, H, title, p)
 
 
@@ -138,16 +165,19 @@ def section(num, title, t):
 def icon(kind, cx, cy, t, col):
     if kind == "score":
         return (f'<circle cx="{cx}" cy="{cy}" r="17" fill="none" stroke="{t["line"]}" stroke-width="5"/>'
-                f'<circle cx="{cx}" cy="{cy}" r="17" fill="none" stroke="{col}" stroke-width="5" stroke-linecap="round" '
-                f'stroke-dasharray="75 107" transform="rotate(-90 {cx} {cy})"/>')
+                f'<g transform="rotate(-90 {cx} {cy})"><circle class="ring" cx="{cx}" cy="{cy}" r="17" fill="none" '
+                f'stroke="{col}" stroke-width="5" stroke-linecap="round"/></g>')
     if kind == "streak":
-        return (f'<path transform="translate({cx - 14} {cy - 20})" fill="{col}" d="M14 0C16 9 28 14 28 26A14 14 0 0 1 0 26'
-                f'C0 18 6 14 8 8C10 14 12 16 14 16C13 10 12 5 14 0Z"/>')
+        return (f'<g transform="translate({cx - 14} {cy - 20})"><g class="flicker"><path fill="{col}" d="M14 0C16 9 28 14 28 26'
+                f'A14 14 0 0 1 0 26C0 18 6 14 8 8C10 14 12 16 14 16C13 10 12 5 14 0Z"/></g></g>')
     if kind == "circle":
         return "".join(f'<circle cx="{cx + dx}" cy="{cy + dy}" r="10" fill="{col}" opacity="{o}"/>'
                        for dx, dy, o in [(-10, 6, 0.55), (10, 6, 0.8), (0, -9, 1)])
-    return (f'<circle cx="{cx}" cy="{cy}" r="18" fill="{t["amberfill"]}"/>'
-            f'<circle cx="{cx}" cy="{cy}" r="12" fill="none" stroke="#7A5A00" stroke-opacity="0.45" stroke-width="2"/>')
+    return (f'<clipPath id="coin"><circle cx="{cx}" cy="{cy}" r="18"/></clipPath>'
+            f'<circle cx="{cx}" cy="{cy}" r="18" fill="{t["amberfill"]}"/>'
+            f'<circle cx="{cx}" cy="{cy}" r="12" fill="none" stroke="#7A5A00" stroke-opacity="0.45" stroke-width="2"/>'
+            f'<g clip-path="url(#coin)"><g class="shine"><rect x="{cx - 34}" y="{cy - 20}" width="8" height="40" '
+            f'fill="#FFF8E1" opacity="0.7" transform="skewX(-20)"/></g></g>')
 
 
 def features(t):
@@ -163,12 +193,49 @@ def features(t):
         x = i * (cw + gap)
         fill, stroke = (t["amberbg"], t["amberfill"] + "55") if reward else (t["card"], t["line"])
         col = t["amber"] if reward else t["accent"]
-        p.append(f'<rect x="{x + 0.5}" y="0.5" width="{cw - 1}" height="{H - 1}" rx="22" fill="{fill}" stroke="{stroke}"/>')
-        p.append(icon(k, x + 44, 50, t, col))
-        p.append(text(stat, MONO, 16, x + cw - 24, 56, col, 0.08, "end"))
-        p.append(text(name, CLASH, 28, x + 24, 128, t["ink"]))
-        p.append(text(desc, GEIST, 17, x + 24, 160, t["muted"]))
+        p.append(rise(
+            f'<rect x="{x + 0.5}" y="0.5" width="{cw - 1}" height="{H - 1}" rx="22" fill="{fill}" stroke="{stroke}"/>'
+            + icon(k, x + 44, 50, t, col)
+            + text(stat, MONO, 16, x + cw - 24, 56, col, 0.08, "end")
+            + text(name, CLASH, 28, x + 24, 128, t["ink"])
+            + text(desc, GEIST, 17, x + 24, 160, t["muted"]), 0.1 * i))
     return svg(W, H, "Zen Score, Streaks, ZenCircle, Gold Pay", p)
+
+
+# ---------------------------------------------------------------- zenmode stats
+# Public numbers only: Play listing and the Product Hunt leaderboard (26 Sep 2026, captured 28 Sep).
+ZM_STATS = [("4.6★", "Play Store rating", "24 reviews", True),
+            ("500+", "installs", "Google Play", False),
+            ("#14", "of 711 on Product Hunt", "launch day · 26 Sep 2026", False),
+            ("#7", "most discussed", "16 comments · top 1% of the day", False)]
+
+
+def star(cx, cy, r, fill):
+    """Five-point star polygon (none of the brand fonts has a ★ glyph)."""
+    import math
+    pts = []
+    for k in range(10):
+        a = -math.pi / 2 + k * math.pi / 5
+        rr = r if k % 2 == 0 else r * 0.45
+        pts.append(f"{cx + rr * math.cos(a):.1f},{cy + rr * math.sin(a):.1f}")
+    return f'<polygon points="{" ".join(pts)}" fill="{fill}" stroke="{fill}" stroke-width="2" stroke-linejoin="round"/>'
+
+
+def zm_stats(t):
+    W, H = 1280, 176
+    gap, n = 16, len(ZM_STATS)
+    cw = (W - gap * (n - 1)) / n
+    p = []
+    for i, (big, label, sub, reward) in enumerate(ZM_STATS):
+        x = i * (cw + gap)
+        col = t["amber"] if reward else t["accent"]
+        p.append(rise(
+            f'<rect x="{x + 0.5}" y="0.5" width="{cw - 1}" height="{H - 1}" rx="20" fill="{t["tint"]}" stroke="{t["tintline"]}"/>'
+            + text(big.replace("★", ""), MONO, 48, x + 24, 72, col)
+            + (star(x + 24 + measure(big.replace("★", ""), MONO, 48) + 20, 54, 15, col) if "★" in big else "")
+            + text(label, GEIST, 20, x + 24, 120, t["ink"])
+            + text(sub, GEIST, 16, x + 24, 148, t["muted"]), 0.12 * i))
+    return svg(W, H, "ZenMode OS: 4.6 star Play rating, 500+ installs, #14 of 711 on Product Hunt launch day, #7 most discussed.", p)
 
 
 # ---------------------------------------------------------------- day job
@@ -246,7 +313,7 @@ os.makedirs(OUT, exist_ok=True)
 for name in os.listdir(OUT):
     os.remove(os.path.join(OUT, name))
 for name, t in THEMES.items():
-    files = {"features": features(t), "work": work(t), "toolbox": toolbox(t), "footer": footer(t),
+    files = {"features": features(t), "zm-stats": zm_stats(t), "work": work(t), "toolbox": toolbox(t), "footer": footer(t),
              "h-now": section("01", "What I'm building", t), "h-work": section("02", "Day job", t),
              "h-stack": section("03", "Toolbox", t)}
     for k, v in files.items():
