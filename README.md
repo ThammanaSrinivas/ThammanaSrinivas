@@ -1,7 +1,4 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg" />
-  <img src="assets/banner-light.svg" alt="Thammana Srinivas. Software engineer at PayPal, founder of ZenMode OS." width="100%" />
-</picture>
+<img src="assets/banner.svg" alt="Thammana Srinivas. Software engineer at PayPal, founder of ZenMode OS." width="100%" />
 
 <br /><br />
 

@@ -85,38 +85,41 @@ def pill(x, y, label, t, fill, stroke, color, dot=None):
 
 
 # ---------------------------------------------------------------- banner
-def banner(t):
+def banner():
+    """Brand-green banner, identical in light and dark: the one loud block at the top of the page,
+    matching the portfolio hero (srinivas-t.web.app). Everything below stays on paper/ink."""
     W, H = 1280, 440
+    white = "#FFFFFF"
     defs = (
-        f'<radialGradient id="wash" cx="0.88" cy="0.05" r="0.85">'
-        f'<stop offset="0" stop-color="{t["wash"]}" stop-opacity="{t["washop"]}"/>'
-        f'<stop offset="1" stop-color="{t["wash"]}" stop-opacity="0"/></radialGradient>'
+        f'<radialGradient id="wash" cx="0.9" cy="0" r="1.1">'
+        f'<stop offset="0" stop-color="#2AA136"/><stop offset="0.45" stop-color="{BRAND}"/>'
+        f'<stop offset="1" stop-color="#0B5C12"/></radialGradient>'
         f'<linearGradient id="fade" x1="0" x2="1"><stop offset="0.35" stop-color="#fff" stop-opacity="0"/>'
         f'<stop offset="1" stop-color="#fff" stop-opacity="1"/></linearGradient>'
         f'<mask id="m"><rect width="{W}" height="{H}" fill="url(#fade)"/></mask>'
         f'<clipPath id="c"><rect width="{W}" height="{H}" rx="28"/></clipPath>'
     )
-    p = [f'<g clip-path="url(#c)"><rect width="{W}" height="{H}" fill="{t["bg"]}"/>',
-         f'<rect width="{W}" height="{H}" fill="url(#wash)"/>']
+    p = [f'<g clip-path="url(#c)"><rect width="{W}" height="{H}" fill="url(#wash)"/>']
     # pattern of mark shapes, fading in from the left, like the hero image
     tiles = []
     for row in range(4):
         for col in range(8):
             x, y = 560 + col * 128 - (row % 2) * 64, -40 + row * 128
-            tiles.append(f'<g transform="translate({x} {y}) scale({104 / 1024})">{glyph(t["accent"])}</g>')
-    p.append(f'<g mask="url(#m)" opacity="0.10">{"".join(tiles)}</g></g>')
-    p.append(f'<rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="28" fill="none" stroke="{t["line"]}"/>')
+            tiles.append(f'<g transform="translate({x} {y}) scale({104 / 1024})">{glyph(white)}</g>')
+    p.append(f'<g mask="url(#m)" opacity="0.09">{"".join(tiles)}</g></g>')
 
     x = 88
-    p.append(mark(x, 88, 104))
-    p.append(text("Thammana Srinivas", CLASH, 76, x, 276, t["ink"]))
-    p.append(text("Software engineer. Building a calmer phone.", GEIST, 28, x, 324, t["muted"]))
-    a, w = pill(x, 358, "SWE @ PAYPAL", t, t["card"], t["line"], t["ink"], dot=t["accent"])
-    b, w2 = pill(x + w + 12, 358, "FOUNDER, ZENMODE OS", t, t["tint"], t["tintline"], t["accent"])
-    c, _ = pill(x + w + w2 + 24, 358, "OPEN SOURCE", t, t["card"], t["line"], t["muted"])
+    # inverse mark: white tile, green glyph
+    p.append(f'<g transform="translate({x} 88) scale({104 / 1024})"><rect width="1024" height="1024" rx="230" fill="{white}"/>'
+             f'{glyph(BRAND, white)}</g>')
+    p.append(text("Thammana Srinivas", CLASH, 76, x, 276, white))
+    p.append(text("Software engineer. Building a calmer phone.", GEIST, 28, x, 324, white, opacity=0.8))
+    a, w = pill(x, 358, "SWE @ PAYPAL", None, "#FFFFFF1A", "#FFFFFF40", white, dot="#5BDF62")
+    b, w2 = pill(x + w + 12, 358, "FOUNDER, ZENMODE OS", None, white, white, BRAND)
+    c, _ = pill(x + w + w2 + 24, 358, "OPEN SOURCE", None, "none", "#FFFFFF40", "#FFFFFFCC")
     p += a + b + c
-    p.append(text("QUIET THE NOISE,", MONO, 16, W - 72, 120, t["muted"], 0.14, "end"))
-    p.append(text("TOGETHER.", MONO, 16, W - 72, 144, t["accent"], 0.14, "end"))
+    p.append(text("QUIET THE NOISE,", MONO, 16, W - 72, 120, white, 0.14, "end", opacity=0.7))
+    p.append(text("TOGETHER.", MONO, 16, W - 72, 144, white, 0.14, "end"))
     return svg(W, H, "Thammana Srinivas. Software engineer at PayPal, founder of ZenMode OS.", p, defs)
 
 
@@ -243,10 +246,11 @@ os.makedirs(OUT, exist_ok=True)
 for name in os.listdir(OUT):
     os.remove(os.path.join(OUT, name))
 for name, t in THEMES.items():
-    files = {"banner": banner(t), "features": features(t), "work": work(t), "toolbox": toolbox(t), "footer": footer(t),
+    files = {"features": features(t), "work": work(t), "toolbox": toolbox(t), "footer": footer(t),
              "h-now": section("01", "What I'm building", t), "h-work": section("02", "Day job", t),
              "h-stack": section("03", "Toolbox", t)}
     for k, v in files.items():
         open(f"{OUT}/{k}-{name}.svg", "w").write(v)
+open(f"{OUT}/banner.svg", "w").write(banner())
 open(f"{OUT}/zenmode-mark.svg", "w").write(svg(96, 96, "ZenMode OS", [mark(0, 0, 96)]))
 print("ok")
