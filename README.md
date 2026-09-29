@@ -1,114 +1,103 @@
-<div align="center">
-  <img src="img/hi_e5677f.png" width="150">
-</div>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg" />
+  <img src="assets/banner-light.svg" alt="Thammana Srinivas. Software engineer at PayPal, founder of ZenMode OS." width="100%" />
+</picture>
 
-<div style="position: relative; height: 80px;">
- <div align="center" style="position: absolute; width: 100%; top: 0;">
-   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=F75C7E&center=true&vCenter=true&width=600&lines=I'm+Thammana+Srinivas!+👨‍💻;Expert+at+Scaling+Cloud+Applications+🚀" />
- </div>
- <div style="position: absolute; bottom: 0; width: 100%;">
-   <img width="100%" height="3" src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png">
- </div>
-</div>
+<br /><br />
 
+<p align="center">
+I build cloud platforms by day and a calmer phone by night.<br />
+At <b>PayPal</b> I work on multi-tenant platforms and cloud migration. On my own time I build<br />
+<b><a href="https://github.com/ThammanaSrinivas/zenmode">ZenMode OS</a></b>, an open-source Android launcher that helps people scroll less, together.
+</p>
 
-## 💼 Professional Summary
+<br />
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/h-now-dark.svg" />
+  <img src="assets/h-now-light.svg" alt="01 What I'm building" width="100%" />
+</picture>
 
-- 🚀 Software Engineer with 3 years of experience building and architecting scalable serverless cloud platforms
-- 📊 Led end-to-end implementation of Kafka-based job scheduling, reducing cron intervals by 98%
-- 💪 Scaled systems to support 10M+ tasks daily with fault-tolerant architecture
-- 👥 Passionate about building distributed systems and mentoring teams
-- 🌟 Currently working as MTS @ Zoho, focusing on cloud platform development
+<a href="https://github.com/ThammanaSrinivas/zenmode"><img src="https://raw.githubusercontent.com/ThammanaSrinivas/zenmode/main/.github/assets/hero.png" alt="A phone running ZenMode OS: Zen Score 7/10, a 13-day streak, gold invested, and a ZenCircle comparing friends' screen time." width="100%" /></a>
 
+<p align="center">
+<b>ZenMode OS</b> turns your home screen into a calm space built around intent.<br />
+It doesn't lock you out. It adds a small pause at the moments you tend to lose time,<br />
+and makes keeping your screen-time promise something you do <b>together with friends</b>.
+</p>
 
-<img width="100%" height="3" src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png">
+<a href="https://github.com/ThammanaSrinivas/zenmode">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/features-dark.svg" />
+  <img src="assets/features-light.svg" alt="Zen Score: your day out of 10. Streaks: promises kept. ZenCircle: accountability with friends. Gold Pay: time saved becomes gold." width="100%" />
+</picture>
+</a>
 
+<p align="center">
+<a href="https://play.google.com/store/apps/details?id=com.zenlauncher.zenmode"><img src="https://img.shields.io/badge/Get%20it%20on-Google%20Play-0F7A18?style=for-the-badge&logo=google-play&logoColor=white&labelColor=111111" alt="Get it on Google Play" /></a>
+<a href="https://zenmodeos.com/"><img src="https://img.shields.io/badge/Visit-zenmodeos.com-0F7A18?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=111111" alt="zenmodeos.com" /></a>
+<a href="https://github.com/ThammanaSrinivas/zenmode"><img src="https://img.shields.io/github/stars/ThammanaSrinivas/zenmode?style=for-the-badge&label=Star&logo=github&color=FFC800&labelColor=111111" alt="Star ZenMode on GitHub" /></a>
+<br />
+<sub>Top ~10% of ~780 at <b>FOSS Hack 2026</b> · GPLv3 · Kotlin + Jetpack Compose · Issues and PRs welcome</sub>
+</p>
 
-## 🚀 Technical Expertise
+<br />
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/h-work-dark.svg" />
+  <img src="assets/h-work-light.svg" alt="02 Day job" width="100%" />
+</picture>
 
-<table>
- <tr>
-   <td valign="top" width="33%">
-     <h3>Languages</h3>
-     <div>
-       <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" />
-       <br>
-       <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-       <br>
-       <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
-       <br>
-       <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
-       <br>
-       <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white" />
-       <br>
-       <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
-       <br>
-       <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
-       <br>
-       <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" />
-     </div>
-   </td>
-   <td valign="top" width="33%">
-     <h3>Frameworks & Technologies</h3>
-     <div>
-       <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white" />
-       <br>
-       <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
-       <br>
-       <img src="https://img.shields.io/badge/Microservices-FF6C37?style=for-the-badge&logo=microservices&logoColor=white" />
-       <br>
-       <img src="https://img.shields.io/badge/Apache_Kafka-231F20?style=for-the-badge&logo=apache-kafka&logoColor=white" />
-       <br>
-       <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" />
-       <br>
-       <img src="https://img.shields.io/badge/REST_API-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
-       <br>
-       <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
-     </div>
-   </td>
-   <td valign="top" width="33%">
-     <h3>Skills & Expertise</h3>
-     <div>
-       <img src="https://img.shields.io/badge/Systems_Design-007ACC?style=for-the-badge&logo=azure-devops&logoColor=white" />
-       <br>
-       <img src="https://img.shields.io/badge/Distributed_Systems-FF6C37?style=for-the-badge&logo=apache&logoColor=white" />
-       <br>
-       <img src="https://img.shields.io/badge/Data_Architecture-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
-       <br>
-       <img src="https://img.shields.io/badge/Test_Driven_Development-25A162?style=for-the-badge&logo=jest&logoColor=white" />
-       <br>
-       <img src="https://img.shields.io/badge/RAG-412991?style=for-the-badge&logo=openai&logoColor=white" />
-       <br>
-       <img src="https://img.shields.io/badge/MCP-0078D4?style=for-the-badge&logo=microsoft&logoColor=white" />
-       <br>
-       <img src="https://img.shields.io/badge/Async_Programming-43853D?style=for-the-badge&logo=node.js&logoColor=white" />
-       <br>
-       <img src="https://img.shields.io/badge/SDK_Development-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
-       <br>
-       <img src="https://img.shields.io/badge/SOLID_Principles-FF5722?style=for-the-badge&logo=solid&logoColor=white" />
-     </div>
-   </td>
- </tr>
-</table>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/work-dark.svg" />
+  <img src="assets/work-light.svg" alt="PayPal, Software Engineer since May 2025: 40% faster tenant onboarding, API maturity up 3 levels, 500K+ record Bigtable POC. Previously Zoho: 10M+ cron jobs a day, scheduling interval cut from 1 hour to 1 minute, dispatch latency 50ms to 5ms." width="100%" />
+</picture>
 
+<details>
+<summary><b>Career highlights</b></summary>
+<br />
 
-<img width="100%" height="3" src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png">
+**PayPal** · Software Engineer 2 · *May 2025 → now*
+- **Multi-tenancy** across the Simplified Case Management (SCM) platform, plus SCM-Commons onboarding that cut new-tenant onboarding time by 40%
+- **Notification API** raised 3 levels on the Richardson Maturity Model with zero breaking changes
+- **LLM-powered engineering automation** replacing manual SOPs: an end-to-end code review agent, a parallel git-worktree feature processor, and an integration-test agent
+- **On-prem → GCP** data migration, automated cloud migration, and cloud bug fixes
+- **RAMP onboarding** of a SaaS-native solution to GCP, enabling cloud deployment for SCM workloads
+- **Bigtable POC** benchmarking 500K+ records with secondary indexes; showed it didn't fit the relational model, avoiding a costly redesign
 
+**Zoho** · Member of Technical Staff · *Jan 2022 → Apr 2025*
+- **Distributed cron scheduler** (Kafka, Redis) running 10M+ jobs a day; minimum interval cut from 1 hour to 1 minute
+- **Dispatch latency 50ms → 5ms** with Redis counters and sorted sets; Kafka messages per cycle down 99.5% (7,000 → 32)
+- **HIPAA-compliant audit log service** built in a month, unblocking the European release and contributing to a 43% revenue increase within 2 months
+- **Catalyst ↔ Zoho Cron adapter** for custom cron expressions, reaching 35% user adoption in 3 months
+- **Automated error alerting** by feature context, cutting issue resolution time by 30–40%
+- **FaaS cold starts** 15s → 12s with the Sparkler team; environment variables for functions, resolving 60% of user tickets
 
-<div align="center">
- <h3>Thanks for visiting! Keep coding! 🚀</h3>
- <img src="img/happy_person.png" width="250">
-</div>
+**Also** · Won the AICTE Chhatra Vishwakarma Hackathon · B.E. Computer Science, Anna University (9.18 CGPA)
 
+</details>
 
-<div style="margin: 25px 0;"></div>
-<div align="center">
- <a href="https://www.linkedin.com/in/evolvedaily/">
-   <img width="24px" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" />
- </a>
- &nbsp;
- <img src="https://komarev.com/ghpvc/?username=ThammanaSrinivas&color=brightgreen&style=flat" alt="Profile Views" />
- </a>
-</div>
+<br />
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/h-stack-dark.svg" />
+  <img src="assets/h-stack-light.svg" alt="03 Toolbox" width="100%" />
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/toolbox-dark.svg" />
+  <img src="assets/toolbox-light.svg" alt="Backend: Java, Spring Boot, Golang, Kafka, Redis, PostgreSQL. Cloud: GCP, Bigtable, Docker, Kubernetes. Android: Kotlin, Jetpack Compose, Firebase. AI and web: TypeScript, Node.js, Python, RAG, MCP, LLM agents." width="100%" />
+</picture>
+
+<br /><br />
+
+<p align="center">
+<a href="https://srinivas-t.web.app/"><img src="https://img.shields.io/badge/Portfolio-srinivas--t.web.app-0F7A18?style=for-the-badge&logo=firebase&logoColor=white&labelColor=111111" alt="Portfolio: srinivas-t.web.app" /></a>
+<a href="https://www.linkedin.com/in/evolvedaily/"><img src="https://img.shields.io/badge/LinkedIn-evolvedaily-0F7A18?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=111111" alt="LinkedIn" /></a>
+<a href="https://zenmodeos.com/"><img src="https://img.shields.io/badge/Web-zenmodeos.com-0F7A18?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=111111" alt="zenmodeos.com" /></a>
+</p>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/footer-dark.svg" />
+  <img src="assets/footer-light.svg" alt="Less scrolling. More living." width="100%" />
+</picture>
