@@ -35,7 +35,7 @@ and makes keeping your screen-time promise something you do <b>together with fri
 <a href="https://www.producthunt.com/products/zenmode-os-android-launcher">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/zm-stats-dark.svg" />
-  <img src="assets/zm-stats-light.svg" alt="ZenMode OS by the numbers: 4.6 star Play Store rating from 24 reviews, 500+ installs, #14 of 711 on Product Hunt launch day (26 Sep 2026), #7 most discussed." width="100%" />
+  <img src="assets/zm-stats-light.svg" alt="ZenMode OS by the numbers: 4.6 star Play Store rating from 24 reviews, 1K+ installs, #14 of 711 on Product Hunt launch day (26 Sep 2026), #7 most discussed." width="100%" />
 </picture>
 </a>
 

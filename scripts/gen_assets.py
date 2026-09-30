@@ -205,7 +205,7 @@ def features(t):
 # ---------------------------------------------------------------- zenmode stats
 # Public numbers only: Play listing and the Product Hunt leaderboard (26 Sep 2026, captured 28 Sep).
 ZM_STATS = [("4.6★", "Play Store rating", "24 reviews", True),
-            ("500+", "installs", "Google Play", False),
+            ("1K+", "installs", "Google Play", False),
             ("#14", "of 711 on Product Hunt", "launch day · 26 Sep 2026", False),
             ("#7", "most discussed", "16 comments · top 1% of the day", False)]
 
@@ -235,7 +235,7 @@ def zm_stats(t):
             + (star(x + 24 + measure(big.replace("★", ""), MONO, 48) + 20, 54, 15, col) if "★" in big else "")
             + text(label, GEIST, 20, x + 24, 120, t["ink"])
             + text(sub, GEIST, 16, x + 24, 148, t["muted"]), 0.12 * i))
-    return svg(W, H, "ZenMode OS: 4.6 star Play rating, 500+ installs, #14 of 711 on Product Hunt launch day, #7 most discussed.", p)
+    return svg(W, H, "ZenMode OS: 4.6 star Play rating, 1K+ installs, #14 of 711 on Product Hunt launch day, #7 most discussed.", p)
 
 
 # ---------------------------------------------------------------- day job
