@@ -75,10 +75,10 @@ and makes keeping your screen-time promise something you do <b>together with fri
 **Zoho** · Member of Technical Staff · *Jan 2022 → Apr 2025*
 - **Distributed cron scheduler** (Kafka, Redis) running 10M+ jobs a day; minimum interval cut from 1 hour to 1 minute
 - **Dispatch latency 50ms → 5ms** with Redis counters and sorted sets; Kafka messages per cycle down 99.5% (7,000 → 32)
-- **HIPAA-compliant audit log service** built in a month, unblocking the European release and contributing to a 43% revenue increase within 2 months
+- **HIPAA-compliant audit log service** built in a month, unblocking the European release and increasing revenue by 17%
 - **Catalyst ↔ Zoho Cron adapter** for custom cron expressions, reaching 35% user adoption in 3 months
 - **Automated error alerting** by feature context, cutting issue resolution time by 30–40%
-- **FaaS cold starts** 15s → 12s with the Sparkler team; environment variables for functions, resolving 60% of user tickets
+- **FaaS platform**: Node.js 16 support with 12% lower cold-start time; environment variables for functions, resolving 60% of user tickets
 
 **Also** · Won the AICTE Chhatra Vishwakarma Hackathon · B.E. Computer Science, Anna University (9.18 CGPA)
 
