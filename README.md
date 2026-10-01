@@ -92,7 +92,7 @@ and makes keeping your screen-time promise something you do <b>together with fri
   <img src="assets/h-how-light.svg" alt="03 How I build" width="100%" />
 </picture>
 
-- **Change the contract, not the callers.** A major change should be 2–3 lines in a core interface plus a new implementation, not a rewrite. ZenMode's app only knows `core-api` interfaces; the open-source build plugs in mocks, production plugs in Firebase.
+- **Change the contract, not the callers.** A major change should be 2–3 lines in a core interface plus a new implementation, not a rewrite. At Zoho, a major change to the job scheduler took exactly that: 2–3 lines in its core interface plus an overloaded implementation. ZenMode's app only knows `core-api` interfaces; the open-source build plugs in mocks, production plugs in Firebase.
 - **Write it once, generically.** Generic, typed building blocks specialised by overloading, not a copy per case.
 - **Make the wrong thing fail the build.** Guardrails over discipline: on [my site](https://thammanasrinivas.com/work), a linter rejects any colour or font defined outside its one source file.
 
