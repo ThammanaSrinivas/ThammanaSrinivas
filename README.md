@@ -100,7 +100,7 @@ and makes keeping your screen-time promise something you do <b>together with fri
 
 <p align="center">
 <a href="https://srinivas-t.web.app/"><img src="https://img.shields.io/badge/Portfolio-srinivas--t.web.app-0F7A18?style=for-the-badge&logo=firebase&logoColor=white&labelColor=111111" alt="Portfolio: srinivas-t.web.app" /></a>
-<a href="https://www.linkedin.com/in/evolvedaily/"><img src="https://img.shields.io/badge/LinkedIn-evolvedaily-0F7A18?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=111111" alt="LinkedIn" /></a>
+<a href="https://www.linkedin.com/in/thammanasrinivas/"><img src="https://img.shields.io/badge/LinkedIn-thammanasrinivas-0F7A18?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=111111" alt="LinkedIn" /></a>
 <a href="https://zenmodeos.com/"><img src="https://img.shields.io/badge/Web-zenmodeos.com-0F7A18?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=111111" alt="zenmodeos.com" /></a>
 </p>
 
