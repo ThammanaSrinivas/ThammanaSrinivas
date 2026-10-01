@@ -1,11 +1,12 @@
-<img src="assets/banner.svg" alt="Thammana Srinivas. Software engineer at PayPal, founder of ZenMode OS." width="100%" />
+<a href="https://thammanasrinivas.com"><img src="assets/banner.svg" alt="Thammana Srinivas. I build innovative systems at scale: platforms at PayPal by day, ZenMode OS on my own time." width="100%" /></a>
 
 <br /><br />
 
 <p align="center">
-I build cloud platforms by day and a calmer phone by night.<br />
+<b>I build innovative systems at scale.</b><br />
 At <b>PayPal</b> I work on multi-tenant platforms and cloud migration. On my own time I build<br />
-<b><a href="https://github.com/ThammanaSrinivas/zenmode">ZenMode OS</a></b>, an open-source Android launcher that helps people scroll less, together.
+<b><a href="https://github.com/ThammanaSrinivas/zenmode">ZenMode OS</a></b>, an open-source Android launcher that helps people scroll less, together.<br />
+<sub>Curiosity · Clarity · Ownership</sub>
 </p>
 
 <br />
@@ -26,7 +27,7 @@ and makes keeping your screen-time promise something you do <b>together with fri
 <a href="https://github.com/ThammanaSrinivas/zenmode">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/features-dark.svg" />
-  <img src="assets/features-light.svg" alt="Zen Score: your day out of 10. Streaks: promises kept. ZenCircle: accountability with friends. Gold Pay: time saved becomes gold." width="100%" />
+  <img src="assets/features-light.svg" alt="Zen Score: your day out of 10. Streaks: promises kept. ZenCircle: accountability with friends. Gold Invest: time saved becomes gold." width="100%" />
 </picture>
 </a>
 
@@ -35,7 +36,7 @@ and makes keeping your screen-time promise something you do <b>together with fri
 <a href="https://www.producthunt.com/products/zenmode-os-android-launcher">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/zm-stats-dark.svg" />
-  <img src="assets/zm-stats-light.svg" alt="ZenMode OS by the numbers: 4.6 star Play Store rating from 24 reviews, 1K+ installs, #14 of 711 on Product Hunt launch day (26 Sep 2026), #7 most discussed." width="100%" />
+  <img src="assets/zm-stats-light.svg" alt="ZenMode OS by the numbers: 4.6 star Play Store rating from 24 reviews, 1K+ installs, #14 of 711 on Product Hunt launch day (26 Sep 2026, #1 in Open Source), #7 most discussed." width="100%" />
 </picture>
 </a>
 
@@ -80,15 +81,26 @@ and makes keeping your screen-time promise something you do <b>together with fri
 - **Automated error alerting** by feature context, cutting issue resolution time by 30–40%
 - **FaaS platform**: Node.js 16 support with 12% lower cold-start time; environment variables for functions, resolving 60% of user tickets
 
-**Also** · Won the AICTE Chhatra Vishwakarma Hackathon · B.E. Computer Science, Anna University (9.18 CGPA)
+**Also** · 1st place, club-level Humorous Speech Contest (Toastmasters) · Scrum Master at PayPal · OCI 2025 Certified Generative AI Professional · Won the AICTE Chhatra Vishwakarma Hackathon · B.E. Computer Science, Anna University (9.18 CGPA)
 
 </details>
 
 <br />
 
 <picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/h-how-dark.svg" />
+  <img src="assets/h-how-light.svg" alt="03 How I build" width="100%" />
+</picture>
+
+- **Change the contract, not the callers.** A major change should be 2–3 lines in a core interface plus a new implementation, not a rewrite. ZenMode's app only knows `core-api` interfaces; the open-source build plugs in mocks, production plugs in Firebase.
+- **Write it once, generically.** Generic, typed building blocks specialised by overloading, not a copy per case.
+- **Make the wrong thing fail the build.** Guardrails over discipline: on [my site](https://thammanasrinivas.com/work), a linter rejects any colour or font defined outside its one source file.
+
+<br />
+
+<picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/h-stack-dark.svg" />
-  <img src="assets/h-stack-light.svg" alt="03 Toolbox" width="100%" />
+  <img src="assets/h-stack-light.svg" alt="04 Toolbox" width="100%" />
 </picture>
 
 <picture>
@@ -99,12 +111,12 @@ and makes keeping your screen-time promise something you do <b>together with fri
 <br /><br />
 
 <p align="center">
-<a href="https://thammanasrinivas.com/"><img src="https://img.shields.io/badge/Portfolio-thammanasrinivas.com-0F7A18?style=for-the-badge&logo=firebase&logoColor=white&labelColor=111111" alt="Portfolio: thammanasrinivas.com" /></a>
-<a href="https://www.linkedin.com/in/thammanasrinivas/"><img src="https://img.shields.io/badge/LinkedIn-thammanasrinivas-0F7A18?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=111111" alt="LinkedIn" /></a>
-<a href="https://zenmodeos.com/"><img src="https://img.shields.io/badge/Web-zenmodeos.com-0F7A18?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=111111" alt="zenmodeos.com" /></a>
+<a href="https://thammanasrinivas.com/"><img src="https://img.shields.io/badge/Portfolio-thammanasrinivas.com-2E745D?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=2B2722" alt="Portfolio: thammanasrinivas.com" /></a>
+<a href="https://www.linkedin.com/in/thammanasrinivas/"><img src="https://img.shields.io/badge/LinkedIn-thammanasrinivas-2E745D?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=2B2722" alt="LinkedIn" /></a>
+<a href="mailto:srinivas@thammanasrinivas.com"><img src="https://img.shields.io/badge/Email-srinivas%40thammanasrinivas.com-2E745D?style=for-the-badge&logo=maildotru&logoColor=white&labelColor=2B2722" alt="Email srinivas@thammanasrinivas.com" /></a>
 </p>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/footer-dark.svg" />
-  <img src="assets/footer-light.svg" alt="Less scrolling. More living." width="100%" />
+  <img src="assets/footer-light.svg" alt="I build innovative systems at scale." width="100%" />
 </picture>
